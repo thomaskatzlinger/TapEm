@@ -24,6 +24,10 @@ GameWindow {
     property bool splashFinished: false
     onSplashScreenFinished: { splashFinished = true}
 
+
+    property int score: 0
+
+
     Scene {
         id: scene
 
@@ -34,7 +38,7 @@ GameWindow {
         // background rectangle matching the logical scene size (= safe zone available on all devices)
         // see here for more details on content scaling and safe zone: https://v-play.net/doc/vplay-different-screen-sizes/
         Rectangle {
-            id: rectangle
+            id: background
             anchors.fill: parent
             color: "grey"
         }
@@ -54,40 +58,46 @@ GameWindow {
                 entityType: "tapEntity" // required for removing all of these entities when the game is lost
 
                 // generates integer values for x between 0 and 3 (incl.)
-                x: Math.round(utils.generateRandomValueBetween(0,3))* rec.width
+                x: Math.round(utils.generateRandomValueBetween(0,3)) * rec.width
 
                 NumberAnimation on y {
                     from: 0 // start at the top
                     to: 480//scene.bottom // move the tapObject to the bottom of the screen
-                    duration: 1000 // it takes the Objects 1 Second to get to the bottom of the screen
+                    duration: 3000 // the time it takes the object to reach the bottom in milliseconds
                     onStopped: {
-                        console.debug("monster reached base - change to gameover scene because the player lost")
-                        //   changeToGameOverScene(false)
+                        isGameLost(rec.tapped)
+                        // changeToGameOverScene(checkIfLost)
                     }
                 }
 
                 Rectangle{
+                    property bool tapped : false
                     id: rec
-                    color: "red"
+
+                    // if the red rectangle gets tapped it turns black
+                    color: tapped ? "black" : "red"
                     // keep the size responsive depending on the display size
                     width: scene.width/4;
                     height: scene.height/8;
-                    x: 0
-                    y: 0
-
-                }
 
 
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {rec.objectTapped()}
                     }
-                }// MouseArea
+                    function objectTapped() {
+                        if(!rec.tapped){ // only increase the score the first time the objects gets tapped
+                            gameWindow.score++;
+                        }
 
-                function tapped(){
-                    rectangle.color = "black";
+                        rec.tapped = true;
+                    }
                 }
+
+
+
+
+
             }// EntityBase
         }// Component
 
@@ -96,13 +106,56 @@ GameWindow {
             running: scene.visible == true && splashFinished // only enable the creation timer, when the gameScene is visible
             repeat: true
             interval: 1000 // a new target(=monster) is spawned every second
-            onTriggered: {scene.spawnTapObject()}
+            onTriggered: {spawnTapObject()}
         }
 
-        function spawnTapObject() {
-            console.debug("spqwn");
-            entityManager.createEntityFromComponent(tapComponent)
+
+
+    }
+
+    function spawnTapObject() {
+        console.debug("spawn");
+        entityManager.createEntityFromComponent(tapComponent)
+    }
+    function isGameLost(tapped){
+        if(!tapped){
+            console.debug("You lost.");
+
+            gameOverScene.visible = true
+            scene.visible = false
         }
     }
 
+    // switch to this scene, after the game was lost or won and it switches back to the gameScene after 3 seconds
+    Scene {
+        id: gameOverScene
+        visible: false
+        Rectangle{
+            id: bgGameOver
+            color: "white"
+            anchors.fill: parent
+        }
+
+        Text {
+            anchors.centerIn: parent
+            color: "black"
+            text:"Score: " + score
+        }
+
+        onVisibleChanged: {
+            if(visible) {
+                returnToGameSceneTimer.start()  // make the scene invisible after 3 seconds, after it got visible
+            }
+        }
+
+        Timer {
+            id: returnToGameSceneTimer
+            interval: 3000
+            onTriggered: {
+                scene.visible = true
+                gameOverScene.visible = false
+                gameWindow.score = 0
+            }
+        }
+    }// GameOverScene
 }
