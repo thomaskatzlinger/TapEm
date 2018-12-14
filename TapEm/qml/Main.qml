@@ -20,6 +20,10 @@ GameWindow {
     screenWidth: 640
     screenHeight: 960
 
+    // create a licenseKey to hide the splash screen
+    property bool splashFinished: false
+    onSplashScreenFinished: { splashFinished = true}
+
     Scene {
         id: scene
 
@@ -33,69 +37,72 @@ GameWindow {
             id: rectangle
             anchors.fill: parent
             color: "grey"
-
-            Text {
-                id: textElement
-                // qsTr() uses the internationalization feature for multi-language support
-                text: qsTr("Hello V-Play World")
-                color: "#ffffff"
-                anchors.centerIn: parent
-            }
-
-            MouseArea {
-                anchors.fill: parent
-
-                // when the rectangle that fits the whole scene is pressed, change the background color and the text
-                onPressed: {
-                    textElement.text = qsTr("Scene-Rectangle is pressed at position " + Math.round(mouse.x) + "," + Math.round(mouse.y))
-                    rectangle.color = "black"
-                    console.debug("pressed position:", mouse.x, mouse.y)
-                }
-
-                onPositionChanged: {
-                    textElement.text = qsTr("Scene-Rectangle is moved at position " + Math.round(mouse.x) + "," + Math.round(mouse.y))
-                    console.debug("mouseMoved or touchDragged position:", mouse.x, mouse.y)
-                }
-
-                // revert the text & color after the touch/mouse button was released
-                // also States could be used for that - search for "QML States" in the doc
-                onReleased: {
-                    textElement.text = qsTr("Hello V-Play World")
-                    rectangle.color = "grey"
-                    console.debug("released position:", mouse.x, mouse.y)
-                }
-            }
-        }// Rectangle with size of logical scene
-
-        Image {
-            id: vplayLogo
-            source: "../assets/vplay-logo.png"
-
-            // 50px is the "logical size" of the image, based on the scene size 480x320
-            // on hd or hd2 displays, it will be shown at 100px (hd) or 200px (hd2)
-            // thus this image should be at least 200px big to look crisp on all resolutions
-            // for more details, see here: https://v-play.net/doc/vplay-different-screen-sizes/
-            width: 50
-            height: 50
-
-            // this positions it absolute right and top of the GameWindow
-            // change resolutions with Ctrl (or Cmd on Mac) + the number keys 1-8 to see the effect
-            anchors.right: scene.gameWindowAnchorItem.right
-            anchors.top: scene.gameWindowAnchorItem.top
-
-            // this animation sequence fades the V-Play logo in and out infinitely (by modifying its opacity property)
-            SequentialAnimation on opacity {
-                loops: Animation.Infinite
-                PropertyAnimation {
-                    to: 0
-                    duration: 1000 // 1 second for fade out
-                }
-                PropertyAnimation {
-                    to: 1
-                    duration: 1000 // 1 second for fade in
-                }
-            }
         }
 
+        // for creating entities (monsters and projectiles) at runtime dynamically
+        EntityManager {
+            id: entityManager
+            entityContainer: scene
+        }
+
+
+        Component{
+            id: tapComponent
+
+
+            EntityBase {
+                entityType: "tapEntity" // required for removing all of these entities when the game is lost
+
+                // generates integer values for x between 0 and 3 (incl.)
+                x: Math.round(utils.generateRandomValueBetween(0,3))* rec.width
+
+                NumberAnimation on y {
+                    from: 0 // start at the top
+                    to: 480//scene.bottom // move the tapObject to the bottom of the screen
+                    duration: 1000 // it takes the Objects 1 Second to get to the bottom of the screen
+                    onStopped: {
+                        console.debug("monster reached base - change to gameover scene because the player lost")
+                        //   changeToGameOverScene(false)
+                    }
+                }
+
+                Rectangle{
+                    id: rec
+                    color: "red"
+                    // keep the size responsive depending on the display size
+                    width: scene.width/4;
+                    height: scene.height/8;
+                    x: 0
+                    y: 0
+
+                }
+
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+
+                    }
+                }// MouseArea
+
+                function tapped(){
+                    rectangle.color = "black";
+                }
+            }// EntityBase
+        }// Component
+
+
+        Timer {
+            running: scene.visible == true && splashFinished // only enable the creation timer, when the gameScene is visible
+            repeat: true
+            interval: 1000 // a new target(=monster) is spawned every second
+            onTriggered: {scene.spawnTapObject()}
+        }
+
+        function spawnTapObject() {
+            console.debug("spqwn");
+            entityManager.createEntityFromComponent(tapComponent)
+        }
     }
+
 }

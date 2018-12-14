@@ -3,7 +3,7 @@ import QtQuick 2.0
 
 EntityBase {
 
-    entityId: "entity"
+    entityId: "tapObject"
     entityType: "customEntity"
 
     Rectangle {

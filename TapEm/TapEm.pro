@@ -51,4 +51,4 @@ macx {
 }
 
 DISTFILES += \
-    qml/TapEntity.qml
+    qml/TapObject.qml
