@@ -4,21 +4,14 @@ import QtQuick 2.0
 GameWindow {
     id: gameWindow
 
-    // You get free licenseKeys from https://v-play.net/licenseKey
-    // With a licenseKey you can:
-    //  * Publish your games & apps for the app stores
-    //  * Remove the V-Play Splash Screen or set a custom one (available with the Pro Licenses)
-    //  * Add plugins to monetize, analyze & improve your apps (available with the Pro Licenses)
-    //licenseKey: "<generate one from https://v-play.net/licenseKey>"
+    activeScene: startScreen
 
-    activeScene: scene
-
-    // the size of the Window can be changed at runtime by pressing Ctrl (or Cmd on Mac) + the number keys 1-8
-    // the content of the logical scene size (480x320 for landscape mode by default) gets scaled to the window size based on the scaleMode
-    // you can set this size to any resolution you would like your project to start with, most of the times the one of your main target device
-    // this resolution is for iPhone 4 & iPhone 4S
     screenWidth: 640
     screenHeight: 960
+
+    // Possible values for gameState: wait, play, gameOver
+    property string gameState: "wait"
+
 
     // create a licenseKey to hide the splash screen
     property bool splashFinished: false
@@ -27,102 +20,123 @@ GameWindow {
 
     property int score: 0
 
+    property color customGrey: "#222222"
 
-    Scene {
-        id: scene
+    property bool spawnOnLeftSide: true
+
+
+    /* The Start Screen is shown at the beginning of the game. If it gets tapped the Game starts */
+    Scene{
+        id: startScreen
 
         // the "logical size" - the scene content is auto-scaled to match the GameWindow size
         width: 320
         height: 480
 
-        // background rectangle matching the logical scene size (= safe zone available on all devices)
-        // see here for more details on content scaling and safe zone: https://v-play.net/doc/vplay-different-screen-sizes/
+        Rectangle {
+            id:backgroundStart
+            anchors.fill: parent
+            color:customGrey
+
+            Text{
+                anchors.centerIn: parent
+                color: "white"
+                text: "< Tap to Start >"
+            }
+        }
+
+        // start the Game on Click
+        MouseArea{
+            anchors.fill: parent
+            onPressed: {startGame()}
+        }
+
+    }
+
+    /* The Play Scene is the actual Game. */
+    Scene {
+        id: playScene
+        visible: false
+
+        onVisibleChanged: {
+            if(visible) {
+                timerLeft.start()  // start the timers on play
+                timerRight.start()
+            }
+        }
+
+        // the "logical size" - the scene content is auto-scaled to match the GameWindow size
+        width: 320
+        height: 480
+
         Rectangle {
             id: background
             anchors.fill: parent
-            color: "grey"
+            color: customGrey
         }
 
-        // for creating entities (monsters and projectiles) at runtime dynamically
+        // for creating entities at runtime dynamically
         EntityManager {
             id: entityManager
-            entityContainer: scene
+            entityContainer: playScene
         }
 
+        /* There are two different types of Components. tapLeftComponents only spawn on the left side of the Screen
+        *  and the other way around.
+        *  This way it is not possible that more than two tapObjects spawn at the same time.
+        *  The reason for that is that the player should always be able to play the game with two fingers (thumbs) only.
+        */
+        Component{
+            id: tapLeftComponent
+
+            TapObjectLeft{
+                id: tapLeftEntityBase
+            }
+        }// Component
 
         Component{
-            id: tapComponent
+            id: tapRightComponent
 
-
-            EntityBase {
-                entityType: "tapEntity" // required for removing all of these entities when the game is lost
-
-                // generates integer values for x between 0 and 3 (incl.)
-                x: Math.round(utils.generateRandomValueBetween(0,3)) * rec.width
-
-                NumberAnimation on y {
-                    from: 0 // start at the top
-                    to: 480//scene.bottom // move the tapObject to the bottom of the screen
-                    duration: 3000 // the time it takes the object to reach the bottom in milliseconds
-                    onStopped: {
-                        isGameLost(rec.tapped)
-                        // changeToGameOverScene(checkIfLost)
-                    }
-                }
-
-                Rectangle{
-                    property bool tapped : false
-                    id: rec
-
-                    // if the red rectangle gets tapped it turns black
-                    color: tapped ? "black" : "red"
-                    // keep the size responsive depending on the display size
-                    width: scene.width/4;
-                    height: scene.height/8;
-
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {rec.objectTapped()}
-                    }
-                    function objectTapped() {
-                        if(!rec.tapped){ // only increase the score the first time the objects gets tapped
-                            gameWindow.score++;
-                        }
-
-                        rec.tapped = true;
-                    }
-                }
-
-
-
-
-
-            }// EntityBase
+            TapObjectRight{
+                id: tapRightEntityBase
+            }
         }// Component
 
 
         Timer {
-            running: scene.visible == true && splashFinished // only enable the creation timer, when the gameScene is visible
+            id: timerLeft
+            running: playScene.visible == true && splashFinished // only enable the creation timer, when the gameScene is visible
             repeat: true
-            interval: 1000 // a new target(=monster) is spawned every second
-            onTriggered: {spawnTapObject()}
+            interval: utils.generateRandomValueBetween(1000, 3000) // a new tap object is spawned
+            onTriggered: {spawnTapObject(true)}
         }
 
+        Timer {
+            id: timerRight
+            running: playScene.visible == true && splashFinished // only enable the creation timer, when the gameScene is visible
+            repeat: true
+            interval: utils.generateRandomValueBetween(1000, 3000) // a new tap object is spawned
+            onTriggered: {spawnTapObject(false)}
+        }
+    }// Play Scene
 
-
+    // Spawn a new TapOject ether on the left or the right half of the screen
+    function spawnTapObject(left) {
+        if(left){
+            gameWindow.spawnOnLeftSide = true;
+            entityManager.createEntityFromComponent(tapLeftComponent)
+        }
+        else{
+            gameWindow.spawnOnLeftSide = false;
+            entityManager.createEntityFromComponent(tapRightComponent)
+        }
     }
 
-    function spawnTapObject() {
-        console.debug("spawn");
-        entityManager.createEntityFromComponent(tapComponent)
-    }
+    // isGameLost gets called whenever a TapObject reaches the bottom of the screen
+    // if the Object has not been tapped at least once the game is over
     function isGameLost(tapped){
         if(!tapped){
-            console.debug("You lost.");
-
-            gameOverScene.visible = true
-            scene.visible = false
+            stopGame();
         }
     }
 
@@ -130,6 +144,7 @@ GameWindow {
     Scene {
         id: gameOverScene
         visible: false
+
         Rectangle{
             id: bgGameOver
             color: "white"
@@ -142,6 +157,11 @@ GameWindow {
             text:"Score: " + score
         }
 
+        MouseArea{
+            anchors.fill: parent
+            onClicked: {if(visible){playScene.gameState = "wait"}}
+        }
+
         onVisibleChanged: {
             if(visible) {
                 returnToGameSceneTimer.start()  // make the scene invisible after 3 seconds, after it got visible
@@ -151,11 +171,32 @@ GameWindow {
         Timer {
             id: returnToGameSceneTimer
             interval: 3000
-            onTriggered: {
-                scene.visible = true
-                gameOverScene.visible = false
-                gameWindow.score = 0
-            }
+            onTriggered: {restartGame()}
         }
-    }// GameOverScene
+
+    }// GameOver Scene
+
+
+    /* ------------ Game State Handling ------------*/
+
+    function startGame() {
+        gameWindow.gameState = "play"
+        startScreen.visible = false
+        playScene.visible = true
+    }
+
+    function stopGame() {
+        gameWindow.gameState = "gameOver"
+        gameOverScene.visible = true
+        playScene.visible = false
+    }
+
+    // unnecessary at the time but keept for later extensions
+    function restartGame(){
+        gameWindow.gameState = "play"
+        playScene.visible = true
+        gameOverScene.visible = false
+        gameWindow.score = 0
+    }
 }
+
