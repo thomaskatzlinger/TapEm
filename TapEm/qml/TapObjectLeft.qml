@@ -11,9 +11,11 @@ EntityBase {
     x: xPos * tapObject.width
 
     NumberAnimation on y {
+        property double dur : 3000 - score*score;
+
         from: 0-tapObject.height // start at the top
         to: 480//scene.bottom // move the tapObject to the bottom of the screen
-        duration: 3000 // the time it takes the object to reach the bottom in milliseconds
+        duration: dur > 500 ? dur : 500 // the time it takes the object to reach the bottom in milliseconds
         onStopped: {
             isGameLost(tapObject.tapped) // if the Object has reached the bottom of the screen without being tapped the game is lost
         }

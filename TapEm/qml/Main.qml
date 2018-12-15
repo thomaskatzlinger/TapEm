@@ -118,7 +118,6 @@ GameWindow {
         }
 
         Text {
-            anchors.top: parent
             x: parent.width/2 - width/2 // horizontal center
             y: 10
             color: "white"
@@ -159,17 +158,21 @@ GameWindow {
 
         Timer {
             id: timerLeft
+            property double rdm : utils.generateRandomValueBetween(600-score*10, 1000-score*5)
             running: playScene.visible == true && splashFinished // only enable the creation timer, when the gameScene is visible
             repeat: true
-            interval: utils.generateRandomValueBetween(1000, 3000) // a new tap object is spawned
+            interval: rdm > 100 ? rdm : 100  // a new tap object is spawned
             onTriggered: {spawnTapObject(true)}
+
         }
 
         Timer {
             id: timerRight
+            property double rdm : utils.generateRandomValueBetween(600-score*10, 1000-score*5)
+
             running: playScene.visible == true && splashFinished // only enable the creation timer, when the gameScene is visible
             repeat: true
-            interval: utils.generateRandomValueBetween(1000, 3000) // a new tap object is spawned
+            interval: rdm > 100 ? rdm : 100  // a new tap object is spawned
             onTriggered: {spawnTapObject(false)}
         }
     }// Play Scene
@@ -179,6 +182,7 @@ GameWindow {
         if(left){
             gameWindow.spawnOnLeftSide = true;
             entityManager.createEntityFromComponent(tapLeftComponent)
+       //     console.debug(timerLeft.f);
         }
         else{
             gameWindow.spawnOnLeftSide = false;
