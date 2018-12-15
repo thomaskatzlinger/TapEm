@@ -38,8 +38,9 @@ GameWindow {
         Rectangle {
             id:backgroundStart
             anchors.fill: parent
-            //    color:customGrey
+            // color:customGrey
 
+            // RadialGradient doesn't work properly for some reason; possible bug?
             RadialGradient{
                 anchors.fill: parent
                 GradientStop {
@@ -58,7 +59,6 @@ GameWindow {
 
             // it is important that Text is declared after RadialGradient because otherwise
             // it would be in the background  and therefore could not be seen
-
             Text {
                 //   anchors.top:  parent
                 y: parent.height/8*2.5
@@ -88,32 +88,11 @@ GameWindow {
             }
         }
 
-
-        SequentialAnimation{
-            running: true
-            loops: Animation.Infinite
-            NumberAnimation {
-                target: tapToStart
-                property: "font.pointSize"
-                duration: 200
-                from: 8
-                to: 11
-            }
-            NumberAnimation {
-                target: tapToStart
-                property: "font.pointSize"
-                duration: 200
-                from: 11
-                to: 8
-            }
-        }
-
         // start the Game on Click
         MouseArea{
             anchors.fill: parent
             onPressed: {startGame()}
         }
-
     }
 
     /* The Play Scene is the actual Game. */
@@ -145,6 +124,7 @@ GameWindow {
             color: "white"
             text:"Score: " + score
             font.family: "Futura"
+            font.bold: true
 
             z: 100 // force to display on top
         }
@@ -226,14 +206,32 @@ GameWindow {
         }
 
         Text {
-            anchors.centerIn: parent
+            y: parent.height/8*2.5
+            x: parent.width/2 - width/2 // horizontal center
+
             color: "black"
+            font.family: "futura"
+
             text:"Score: " + score
+        }
+
+        Text {
+            id: tapToRestart
+
+            y: (parent.height/8*5)
+            x: parent.width/2 - width/2 // horizontal center
+
+            color: "Black"
+            font.family: "Futura"
+            font.bold: true
+
+            text: "< Tap to Restart >"
+            font.pointSize: 8
         }
 
         MouseArea{
             anchors.fill: parent
-            onClicked: {if(visible){playScene.gameState = "wait"}}
+            onClicked: {if(visible){gameWindow.gameState = "wait"}}
         }
 
         onVisibleChanged: {
@@ -265,7 +263,7 @@ GameWindow {
         playScene.visible = false
     }
 
-    // unnecessary at the time but keept for later extensions
+    // unnecessary at this moment in the time but keept for later extensions
     function restartGame(){
         gameWindow.gameState = "play"
         playScene.visible = true
