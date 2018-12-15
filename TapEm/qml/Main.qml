@@ -83,8 +83,25 @@ GameWindow {
 
                 text: "< Tap to Start >"
                 font.pointSize: 8
+            }
 
-
+            SequentialAnimation{
+                running: true
+                loops: Animation.Infinite
+                NumberAnimation {
+                    target: tapToStart
+                    property: "font.pointSize"
+                    duration: 200
+                    from: 8
+                    to: 11
+                }
+                NumberAnimation {
+                    target: tapToStart
+                    property: "font.pointSize"
+                    duration: 200
+                    from: 11
+                    to: 8
+                }
             }
         }
 
@@ -156,23 +173,25 @@ GameWindow {
         }// Component
 
 
+        // Spawn Timer for the left half
         Timer {
             id: timerLeft
-            property double rdm : utils.generateRandomValueBetween(600-score*10, 1000-score*5)
+            property double rdm : utils.generateRandomValueBetween(600-score*10, 1000-score*5) // decreases difficulty over time
             running: playScene.visible == true && splashFinished // only enable the creation timer, when the gameScene is visible
             repeat: true
-            interval: rdm > 100 ? rdm : 100  // a new tap object is spawned
+            interval: rdm > 100 ? rdm : 100  /// makes sure the spawn interval does not drop below 100
             onTriggered: {spawnTapObject(true)}
 
         }
 
+        // Spawn Timer for the right half
         Timer {
             id: timerRight
-            property double rdm : utils.generateRandomValueBetween(600-score*10, 1000-score*5)
+            property double rdm : utils.generateRandomValueBetween(600-score*10, 1000-score*5) // decreases difficulty over time
 
             running: playScene.visible == true && splashFinished // only enable the creation timer, when the gameScene is visible
             repeat: true
-            interval: rdm > 100 ? rdm : 100  // a new tap object is spawned
+            interval: rdm > 100 ? rdm : 100  // makes sure the spawn interval does not drop below 100
             onTriggered: {spawnTapObject(false)}
         }
     }// Play Scene
@@ -182,7 +201,7 @@ GameWindow {
         if(left){
             gameWindow.spawnOnLeftSide = true;
             entityManager.createEntityFromComponent(tapLeftComponent)
-       //     console.debug(timerLeft.f);
+            //     console.debug(timerLeft.f);
         }
         else{
             gameWindow.spawnOnLeftSide = false;
@@ -202,6 +221,11 @@ GameWindow {
     Scene {
         id: gameOverScene
         visible: false
+
+        // the "logical size" - the scene content is auto-scaled to match the GameWindow size
+        width: 320
+        height: 480
+
 
         Rectangle{
             id: bgGameOver
@@ -229,13 +253,8 @@ GameWindow {
             font.family: "Futura"
             font.bold: true
 
-            text: "< Tap to Restart >"
+            text: "You can do better than that!\n\n< Restarting in 3 Seconds... >"
             font.pointSize: 8
-        }
-
-        MouseArea{
-            anchors.fill: parent
-            onClicked: {if(visible){gameWindow.gameState = "wait"}}
         }
 
         onVisibleChanged: {
@@ -249,7 +268,6 @@ GameWindow {
             interval: 3000
             onTriggered: {restartGame()}
         }
-
     }// GameOver Scene
 
 
@@ -269,10 +287,10 @@ GameWindow {
 
     // unnecessary at this moment in the time but keept for later extensions
     function restartGame(){
-        gameWindow.gameState = "play"
-        playScene.visible = true
-        gameOverScene.visible = false
         gameWindow.score = 0
+        gameWindow.gameState = "play"
+        gameOverScene.visible = false
+        playScene.visible = true
     }
 }
 
