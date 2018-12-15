@@ -1,6 +1,6 @@
 import VPlay 2.0
 import QtQuick 2.0
-
+import QtGraphicalEffects 1.0
 
 EntityBase {
     // property int xPos: Math.round(utils.generateRandomValueBetween(0,3))
@@ -34,9 +34,38 @@ EntityBase {
             anchors.fill: parent
             onClicked: {tapObject.objectTapped()}
         }
+
+        // Objects getting tapped and then disappear
+        PropertyAnimation {
+            id: anim
+            target: tapObject
+            property: "color"
+            to: "#00222222"
+            duration: 300
+
+        }
+
+        RadialGradient {
+            anchors.fill: parent
+            gradient: Gradient {
+
+                GradientStop {
+                    position: 0.0
+                    color: "#00111111"
+                }
+                GradientStop {
+                    position: 1.0
+                    color: "#FF222222"
+                }
+            }
+        }// RadialGradient
+
+
+
         function objectTapped() {
             if(!tapObject.tapped){ // only increase the score the first time the objects gets tapped
                 gameWindow.score++;
+               anim.running = true;
             }
 
             tapObject.tapped = true;
@@ -45,4 +74,3 @@ EntityBase {
 
     }
 }// EntityBase
-

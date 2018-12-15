@@ -1,0 +1,2065 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+		5E618435888B9D49F8540165 = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Qt Qmake";
+			shellPath = "/bin/sh";
+			shellScript = "make -C /Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug/ -f TapEm.xcodeproj/qt_makeqmake.mak";
+			showEnvVarsInLog = "0";
+		};
+		DC76E7FF5F8A41F949C36656 = {
+			isa = PBXFileReference;
+			path = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/main.cpp";
+			name = "main.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		52135133B3FCEBEAA572C260 = {
+			fileRef = "DC76E7FF5F8A41F949C36656";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		74844124BDACFF47A1A00A21 = {
+			isa = PBXFileReference;
+			path = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug/tapem_plugin_import.cpp";
+			name = "tapem_plugin_import.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		3DB438A1A33A4C39ECC6EB6A = {
+			fileRef = "74844124BDACFF47A1A00A21";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		8B20D42F74B4A5BD992F6D46 = {
+			isa = PBXFileReference;
+			path = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug/tapem_qml_plugin_import.cpp";
+			name = "tapem_qml_plugin_import.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		DAC0BEF6B6DF854344E1AD0F = {
+			fileRef = "8B20D42F74B4A5BD992F6D46";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		31ED83069740763E88E226AC = {
+			isa = PBXFileReference;
+			path = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug/qrc_resources_user.cpp";
+			name = "qrc_resources_user.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		29AA32B7F9F74489F2DEEE85 = {
+			fileRef = "31ED83069740763E88E226AC";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		3C225354AE45EA8230CE5EDB = {
+			isa = PBXFileReference;
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/mkspecs/common/vplay/resources_user.qrc";
+			name = "resources_user.qrc";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "text";
+		};
+		F158A48EB248A0A625B12D1B = {
+			fileRef = "3C225354AE45EA8230CE5EDB";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		693650AD58FF1666BCC63C61 = {
+			isa = PBXFileReference;
+			path = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug/TapEm.pro";
+			name = "TapEm.pro";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "text";
+		};
+		868C8F3BEB8F3AD421AD6F0D = {
+			isa = PBXFileReference;
+			path = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug/.qmake.stash";
+			name = ".qmake.stash";
+			sourceTree = "<absolute>";
+		};
+		C8D180905ADBDC5703E44EA4 = {
+			isa = PBXFileReference;
+			path = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/TapEm.pro";
+			name = "TapEm.pro";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "text";
+		};
+		25B08E2869634E9BCBA333A2 = {
+			isa = PBXGroup;
+			children = (
+				"74844124BDACFF47A1A00A21",
+				"8B20D42F74B4A5BD992F6D46",
+				"31ED83069740763E88E226AC");
+			name = "Generated Sources";
+			sourceTree = "<group>";
+		};
+		87DF60DE337FB58864343E39 = {
+			isa = PBXGroup;
+			children = (
+				"3C225354AE45EA8230CE5EDB");
+			name = "Resources";
+			sourceTree = "<group>";
+		};
+		2EB56BE3C2D93CDAB0C52E67 = {
+			isa = PBXGroup;
+			children = (
+				"DC76E7FF5F8A41F949C36656");
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		74B182DB50CB5611B5C1C297 = {
+			isa = PBXGroup;
+			children = (
+				"693650AD58FF1666BCC63C61",
+				"868C8F3BEB8F3AD421AD6F0D",
+				"C8D180905ADBDC5703E44EA4");
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EF0942E79C014DCEC8976BC = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Qt Preprocessors";
+			shellPath = "/bin/sh";
+			shellScript = "make -C /Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug/ -f TapEm.xcodeproj/qt_preprocess.mak";
+			showEnvVarsInLog = "0";
+		};
+		F7E50F631C51CD5B5DC0BC43 = {
+			buildActionMask = 2147483647;
+			files = (
+				"52135133B3FCEBEAA572C260",
+				"3DB438A1A33A4C39ECC6EB6A",
+				"DAC0BEF6B6DF854344E1AD0F",
+				"29AA32B7F9F74489F2DEEE85");
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Compile Sources";
+		};
+		99A21B0D222BF04B05103523 = {
+			isa = PBXFileReference;
+			name = "VPlay";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libVPlay.a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		9444FF047E14E3B78479BEA4 = {
+			fileRef = "99A21B0D222BF04B05103523";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		CF27DA584C2D8714BF3774CF = {
+			isa = PBXFileReference;
+			name = "AddressBook.framework";
+			path = "/System/Library/Frameworks/AddressBook.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		7167D10E380E2516806FA9E8 = {
+			fileRef = "CF27DA584C2D8714BF3774CF";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		FCC237CA5AD60B9BA4447615 = {
+			isa = PBXFileReference;
+			name = "Foundation.framework";
+			path = "/System/Library/Frameworks/Foundation.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		F26454630C80841CBDCFE1CA = {
+			fileRef = "FCC237CA5AD60B9BA4447615";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		7EC00404ACD5AB0E97726B0E = {
+			isa = PBXFileReference;
+			name = "QuartzCore.framework";
+			path = "/System/Library/Frameworks/QuartzCore.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		B460F624007324313696BE86 = {
+			fileRef = "7EC00404ACD5AB0E97726B0E";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		3C44131FDCFEF4396B9EA2BA = {
+			isa = PBXFileReference;
+			name = "AudioToolbox.framework";
+			path = "/System/Library/Frameworks/AudioToolbox.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		4EB68D0C8182BCE33529C421 = {
+			fileRef = "3C44131FDCFEF4396B9EA2BA";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		4D765E1B1EA6C757220C63E7 = {
+			isa = PBXFileReference;
+			name = "CoreFoundation.framework";
+			path = "/System/Library/Frameworks/CoreFoundation.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		F8B465CE34D8DF87AAE95913 = {
+			fileRef = "4D765E1B1EA6C757220C63E7";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6AE3EC31EE5BB1FCEE84137C = {
+			isa = PBXFileReference;
+			name = "CoreGraphics.framework";
+			path = "/System/Library/Frameworks/CoreGraphics.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		0CE02722F00CAD43741297B5 = {
+			fileRef = "6AE3EC31EE5BB1FCEE84137C";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		7D7B02101166B76FD2D4F8B4 = {
+			isa = PBXFileReference;
+			name = "CoreText.framework";
+			path = "/System/Library/Frameworks/CoreText.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		2B02D9DC58A01E45248DDBCE = {
+			fileRef = "7D7B02101166B76FD2D4F8B4";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		3A8EF9C62A8D4790CBB89CEA = {
+			isa = PBXFileReference;
+			name = "ImageIO.framework";
+			path = "/System/Library/Frameworks/ImageIO.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		61EEC397DC8556BF8C4E36A7 = {
+			fileRef = "3A8EF9C62A8D4790CBB89CEA";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1BC99EFDB381FAEE73AD6BA9 = {
+			isa = PBXFileReference;
+			name = "qiosnsphotolibrarysupport";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/platforms/darwin/libqiosnsphotolibrarysupport$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		48E7E0402994C65E23AA2E9B = {
+			fileRef = "1BC99EFDB381FAEE73AD6BA9";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		2C3B63357AA6B8D3FD40F5E9 = {
+			isa = PBXFileReference;
+			name = "qavfcamera";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/mediaservice/libqavfcamera$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		9FC8E53B7D727D335F2A8AA1 = {
+			fileRef = "2C3B63357AA6B8D3FD40F5E9";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		BEF9DFDA6822604126A7E233 = {
+			isa = PBXFileReference;
+			name = "CoreAudio.framework";
+			path = "/System/Library/Frameworks/CoreAudio.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		35A1A39F8EAB37889EB3D397 = {
+			fileRef = "BEF9DFDA6822604126A7E233";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		547CCADBD1CC5050167EF948 = {
+			isa = PBXFileReference;
+			name = "CoreMedia.framework";
+			path = "/System/Library/Frameworks/CoreMedia.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		B78304F135DEF1F7A68393A6 = {
+			fileRef = "547CCADBD1CC5050167EF948";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F923F38E989CF0F61A164DD8 = {
+			isa = PBXFileReference;
+			name = "CoreVideo.framework";
+			path = "/System/Library/Frameworks/CoreVideo.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		6602E41D28CF886E694AD752 = {
+			fileRef = "F923F38E989CF0F61A164DD8";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		205259EEEE2BADA5E64741E3 = {
+			isa = PBXFileReference;
+			name = "Security.framework";
+			path = "/System/Library/Frameworks/Security.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		15364689D2AB5A30E87A689F = {
+			fileRef = "205259EEEE2BADA5E64741E3";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		21F907AB8D19BD779147A085 = {
+			isa = PBXFileReference;
+			name = "AVFoundation.framework";
+			path = "/System/Library/Frameworks/AVFoundation.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		CCA737EE379CDB10CC9A0F23 = {
+			fileRef = "21F907AB8D19BD779147A085";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A71E5C5A9FAF1CD0A9AB505D = {
+			isa = PBXFileReference;
+			name = "qavfmediaplayer";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/mediaservice/libqavfmediaplayer$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		6358E0672B918DD91519A72F = {
+			fileRef = "A71E5C5A9FAF1CD0A9AB505D";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E91316BEB37C47657C51D223 = {
+			isa = PBXFileReference;
+			name = "Qt5MultimediaWidgets";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5MultimediaWidgets$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		15B9D085386D49165952F7EB = {
+			fileRef = "E91316BEB37C47657C51D223";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		DE065BD14A062B3D24C724C1 = {
+			isa = PBXFileReference;
+			name = "Qt5OpenGL";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5OpenGL$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		0E9D4C2EBAA944CB2A2F0E49 = {
+			fileRef = "DE065BD14A062B3D24C724C1";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B92AC977828FCD14F77A3E84 = {
+			isa = PBXFileReference;
+			name = "qtmedia_audioengine";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/mediaservice/libqtmedia_audioengine$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		0983A1E7188F92E0BF267D6D = {
+			fileRef = "B92AC977828FCD14F77A3E84";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6BEA45ECB54E8144B0D0E225 = {
+			isa = PBXFileReference;
+			name = "qtaudio_coreaudio";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/audio/libqtaudio_coreaudio$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		397CD4C9FFB35D67E3CA1B9B = {
+			fileRef = "6BEA45ECB54E8144B0D0E225";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		477D9510A9A34EEA186E705C = {
+			isa = PBXFileReference;
+			name = "qtmultimedia_m3u";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/playlistformats/libqtmultimedia_m3u$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		281E6380E174D3EBD09622C6 = {
+			fileRef = "477D9510A9A34EEA186E705C";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B5FCC8A4ABF4F7E33321D49C = {
+			isa = PBXFileReference;
+			name = "qios";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/platforms/libqios$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		C800920F9EC40A13E51A35CC = {
+			fileRef = "B5FCC8A4ABF4F7E33321D49C";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		2C42672534D1D5830E8B87AC = {
+			isa = PBXFileReference;
+			name = "Qt5FontDatabaseSupport";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5FontDatabaseSupport$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		5B5E5FE4637C1C73102E44E8 = {
+			fileRef = "2C42672534D1D5830E8B87AC";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8980712814F5B052003DE88C = {
+			isa = PBXFileReference;
+			name = "qtfreetype";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libqtfreetype$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		F7BC51FE83F07193D4CB88D0 = {
+			fileRef = "8980712814F5B052003DE88C";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		005C5650B37ECCA17B3EBB30 = {
+			isa = PBXFileReference;
+			name = "Qt5GraphicsSupport";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5GraphicsSupport$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		FAF4D581384654A4FE0AF77C = {
+			fileRef = "005C5650B37ECCA17B3EBB30";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E0522F8437CC56B525D5EB9D = {
+			isa = PBXFileReference;
+			name = "Qt5ClipboardSupport";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5ClipboardSupport$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		2B45D32FDC37034A1C42A325 = {
+			fileRef = "E0522F8437CC56B525D5EB9D";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		5A2D0511BF621320C17CD3A2 = {
+			isa = PBXFileReference;
+			name = "qgif";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats/libqgif$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		9668916BF5B7DB7E7AE01C6C = {
+			fileRef = "5A2D0511BF621320C17CD3A2";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		23CD748A44F6AA13B3A38FE4 = {
+			isa = PBXFileReference;
+			name = "qicns";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats/libqicns$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		10ADEEFA0646667BEA6752B4 = {
+			fileRef = "23CD748A44F6AA13B3A38FE4";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B5C4B0263AF756CF84ECB951 = {
+			isa = PBXFileReference;
+			name = "qico";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats/libqico$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		968F8A9EC14FB5FE46F583B6 = {
+			fileRef = "B5C4B0263AF756CF84ECB951";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		237B3A18ADA35C2AA5BFD31F = {
+			isa = PBXFileReference;
+			name = "qjpeg";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats/libqjpeg$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		A097824441B2A8382B5B2438 = {
+			fileRef = "237B3A18ADA35C2AA5BFD31F";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A9F1BF1DE7A071B2FE92D0BC = {
+			isa = PBXFileReference;
+			name = "qmacheif";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats/libqmacheif$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		4A11A2A504B0C6ABE1462666 = {
+			fileRef = "A9F1BF1DE7A071B2FE92D0BC";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E11968E760A4E009225D9477 = {
+			isa = PBXFileReference;
+			name = "qmacjp2";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats/libqmacjp2$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		4537337DD831DB6C1F5EDA11 = {
+			fileRef = "E11968E760A4E009225D9477";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		5D387C506864CEC4D021CAFB = {
+			isa = PBXFileReference;
+			name = "qtga";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats/libqtga$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		407720B2225AFF1A34956046 = {
+			fileRef = "5D387C506864CEC4D021CAFB";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1D4F7402433E3A5258C3A3E3 = {
+			isa = PBXFileReference;
+			name = "qtiff";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats/libqtiff$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		3AA564BDB4494B812D86C165 = {
+			fileRef = "1D4F7402433E3A5258C3A3E3";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		AB73E65D2F84767CC257244D = {
+			isa = PBXFileReference;
+			name = "qwbmp";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats/libqwbmp$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		B86095B9129825D08864B8A5 = {
+			fileRef = "AB73E65D2F84767CC257244D";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C7FF0B47D658CEAD8D68D39D = {
+			isa = PBXFileReference;
+			name = "qwebp";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats/libqwebp$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		EEAC9AF0A0494C6FAF178C00 = {
+			fileRef = "C7FF0B47D658CEAD8D68D39D";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F9581B1857CA540D60672FB0 = {
+			isa = PBXFileReference;
+			name = "qmldbg_debugger";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling/libqmldbg_debugger$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E48650E3E5C91AA4CD362949 = {
+			fileRef = "F9581B1857CA540D60672FB0";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		903FC366F89FF7628BF8D003 = {
+			isa = PBXFileReference;
+			name = "qmldbg_inspector";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling/libqmldbg_inspector$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		D869FF27582AB4C6D61103B5 = {
+			fileRef = "903FC366F89FF7628BF8D003";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		859BD86A5634B41288B4911E = {
+			isa = PBXFileReference;
+			name = "qmldbg_local";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling/libqmldbg_local$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		442810B5B16A40ADD4F3BBD2 = {
+			fileRef = "859BD86A5634B41288B4911E";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		D9379BB92F7137D61AFE5CF4 = {
+			isa = PBXFileReference;
+			name = "qmldbg_messages";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling/libqmldbg_messages$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		9118B63DEB469B977989349A = {
+			fileRef = "D9379BB92F7137D61AFE5CF4";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		69C711DD3E6E4E15AEB507A8 = {
+			isa = PBXFileReference;
+			name = "qmldbg_native";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling/libqmldbg_native$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		A38007ECEA86E3FA51640B58 = {
+			fileRef = "69C711DD3E6E4E15AEB507A8";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		03F5663BBE697082CB6F1012 = {
+			isa = PBXFileReference;
+			name = "qmldbg_nativedebugger";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling/libqmldbg_nativedebugger$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		A232EECE3CC6DB336F051CD6 = {
+			fileRef = "03F5663BBE697082CB6F1012";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		536D7940009B932DDC2CD198 = {
+			isa = PBXFileReference;
+			name = "qmldbg_profiler";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling/libqmldbg_profiler$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		895532DC10012FF5C0038DC9 = {
+			fileRef = "536D7940009B932DDC2CD198";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		EE88DCC6411ECD4F703B97D3 = {
+			isa = PBXFileReference;
+			name = "qmldbg_quickprofiler";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling/libqmldbg_quickprofiler$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		BF9761BF99581C3C7BF944A2 = {
+			fileRef = "EE88DCC6411ECD4F703B97D3";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		19FF2B403FF2F2235DBB87BE = {
+			isa = PBXFileReference;
+			name = "qmldbg_server";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling/libqmldbg_server$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		9D1D22210DB67BC00D24B614 = {
+			fileRef = "19FF2B403FF2F2235DBB87BE";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		DE5DED4707A95079B0E5363E = {
+			isa = PBXFileReference;
+			name = "Qt5PacketProtocol";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5PacketProtocol$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		FC759FF4C76522D4E722D152 = {
+			fileRef = "DE5DED4707A95079B0E5363E";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		621DADD5F916B3C839AFA3CE = {
+			isa = PBXFileReference;
+			name = "qmldbg_tcp";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling/libqmldbg_tcp$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		815568059FEA334F5F9E514B = {
+			fileRef = "621DADD5F916B3C839AFA3CE";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		BF3BC53EEC75606069ABC686 = {
+			isa = PBXFileReference;
+			name = "qgenericbearer";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/bearer/libqgenericbearer$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		B41D3752B316594B368772A2 = {
+			fileRef = "BF3BC53EEC75606069ABC686";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C28EF4E7AD0BE4D387CC2091 = {
+			isa = PBXFileReference;
+			name = "qsqlite";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/plugins/sqldrivers/libqsqlite$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		139C45A8A5E652EB28EB28AC = {
+			fileRef = "C28EF4E7AD0BE4D387CC2091";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		BC2485AAF277CD790B419D91 = {
+			isa = PBXFileReference;
+			name = "Qt5Widgets";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5Widgets$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		808E89B16CDD1E3D4FD440ED = {
+			fileRef = "BC2485AAF277CD790B419D91";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5814BE76F5C3BFF9C74763F = {
+			isa = PBXFileReference;
+			name = "Qt5WebSockets";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5WebSockets$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		9756BDEAC57316FD12CDB43D = {
+			fileRef = "F5814BE76F5C3BFF9C74763F";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		CE97D21CA4E6D4AA469A0537 = {
+			isa = PBXFileReference;
+			name = "qtquick2plugin";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick.2/libqtquick2plugin$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		18FB55D3AB26AFECDE48CFF5 = {
+			fileRef = "CE97D21CA4E6D4AA469A0537";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		B833BE984E67735E938C49E8 = {
+			isa = PBXFileReference;
+			name = "qtgraphicaleffectsplugin";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtGraphicalEffects/libqtgraphicaleffectsplugin$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		27399983CCE15CB6F3D83464 = {
+			fileRef = "B833BE984E67735E938C49E8";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		DC644687B1583DD44A7BEE14 = {
+			isa = PBXFileReference;
+			name = "qtgraphicaleffectsprivate";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtGraphicalEffects/private/libqtgraphicaleffectsprivate$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		9A8119346FD96B66B234B19B = {
+			fileRef = "DC644687B1583DD44A7BEE14";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		66CFFFF68476737A2FC9C24E = {
+			isa = PBXFileReference;
+			name = "windowplugin";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Window.2/libwindowplugin$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		B797B7805BD9BB7653A6A999 = {
+			fileRef = "66CFFFF68476737A2FC9C24E";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		82BB2D75780353E7989EC083 = {
+			isa = PBXFileReference;
+			name = "declarative_multimedia";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtMultimedia/libdeclarative_multimedia$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		B289B4B3F2196ABAE3C7006E = {
+			fileRef = "82BB2D75780353E7989EC083";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		EC2BA8E70385D064D0F47FB4 = {
+			isa = PBXFileReference;
+			name = "Qt5MultimediaQuick";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5MultimediaQuick$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		9AE0415F0835F9BF31498F09 = {
+			fileRef = "EC2BA8E70385D064D0F47FB4";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9B046880CF0D0790F1679CEB = {
+			isa = PBXFileReference;
+			name = "Qt5Multimedia";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5Multimedia$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		03270F9B7937964C0C76F7A7 = {
+			fileRef = "9B046880CF0D0790F1679CEB";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		E9583B8FC6BC8E3AE2FCB52F = {
+			isa = PBXFileReference;
+			name = "qmllocalstorageplugin";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/LocalStorage/libqmllocalstorageplugin$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		97B314FF82095553EC347DB1 = {
+			fileRef = "E9583B8FC6BC8E3AE2FCB52F";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		AD3436B498A1D566A6CC0CF3 = {
+			isa = PBXFileReference;
+			name = "Qt5Sql";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5Sql$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		CF56D42FDA427B8C6F5BBEB7 = {
+			fileRef = "AD3436B498A1D566A6CC0CF3";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6F313FFC1A28C5E274C68324 = {
+			isa = PBXFileReference;
+			name = "qtquickcontrolsplugin";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls/libqtquickcontrolsplugin$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		7F9BBE2F805879CC385CBBC1 = {
+			fileRef = "6F313FFC1A28C5E274C68324";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		DA0C587AC602801C99275864 = {
+			isa = PBXFileReference;
+			name = "qquicklayoutsplugin";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Layouts/libqquicklayoutsplugin$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		1E043F185F68390C7A0B7AD6 = {
+			fileRef = "DA0C587AC602801C99275864";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		F5F1B9ADBFE5E9A0B58EE68F = {
+			isa = PBXFileReference;
+			name = "particlesplugin";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Particles.2/libparticlesplugin$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		14D18828B515F4074A295977 = {
+			fileRef = "F5F1B9ADBFE5E9A0B58EE68F";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		7AD55E33DCEF587BFCE80AE9 = {
+			isa = PBXFileReference;
+			name = "Qt5QuickParticles";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5QuickParticles$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		EAD86FB14C7B037927BF5FB6 = {
+			fileRef = "7AD55E33DCEF587BFCE80AE9";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		35454AC05C073458A4480AAF = {
+			isa = PBXFileReference;
+			name = "declarative_location";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtLocation/libdeclarative_location$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		EECBFAFE88BFA5373C9EC147 = {
+			fileRef = "35454AC05C073458A4480AAF";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A91E0D8730DC28A6AC521633 = {
+			isa = PBXFileReference;
+			name = "Qt5Location";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5Location$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		1B6EB9064D3F5FF65083BCA1 = {
+			fileRef = "A91E0D8730DC28A6AC521633";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		D60D78D5D2B8F505FB65BEEC = {
+			isa = PBXFileReference;
+			name = "declarative_positioning";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtPositioning/libdeclarative_positioning$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		DB3AC6B7696970BF4BA1DC63 = {
+			fileRef = "D60D78D5D2B8F505FB65BEEC";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		5F9D849923974AC497ACBE2B = {
+			isa = PBXFileReference;
+			name = "Qt5PositioningQuick";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5PositioningQuick$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		DDF98F71B5EC2C3CE2FA6162 = {
+			fileRef = "5F9D849923974AC497ACBE2B";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		FC1F25EEA9DBA5401B2F9660 = {
+			isa = PBXFileReference;
+			name = "Qt5Positioning";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5Positioning$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		87530620467AD39947883C00 = {
+			fileRef = "FC1F25EEA9DBA5401B2F9660";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		0244A800AF0F262B4E9D45A9 = {
+			isa = PBXFileReference;
+			name = "clip2tri";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libclip2tri$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		C33FB9EF9E586C2697AD46F6 = {
+			fileRef = "0244A800AF0F262B4E9D45A9";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		943CA005091A56FBB1F111DE = {
+			isa = PBXFileReference;
+			name = "poly2tri";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libpoly2tri$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		BA00143332D74663F1B2ACCB = {
+			fileRef = "943CA005091A56FBB1F111DE";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D5C60D7E836AD83CA4726E8 = {
+			isa = PBXFileReference;
+			name = "clipper";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libclipper$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		F478304C3B4E9E9FF7FB2F4A = {
+			fileRef = "8D5C60D7E836AD83CA4726E8";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		BB5C90286B39957899AE520E = {
+			isa = PBXFileReference;
+			name = "declarative_webview";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtWebView/libdeclarative_webview$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E7807971B16464887BC0C002 = {
+			fileRef = "BB5C90286B39957899AE520E";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		D1EA355240FCAE72BC4208BE = {
+			isa = PBXFileReference;
+			name = "Qt5WebView";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5WebView$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		4FB1453B88F9B1BFB36C3D09 = {
+			fileRef = "D1EA355240FCAE72BC4208BE";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C8537935A79411355903DE6B = {
+			isa = PBXFileReference;
+			name = "qtquickcontrols2plugin";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls.2/libqtquickcontrols2plugin$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		E4AC6A27329F7424433FACAB = {
+			fileRef = "C8537935A79411355903DE6B";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		862880D39CE92253F34E84DF = {
+			isa = PBXFileReference;
+			name = "qtquicktemplates2plugin";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Templates.2/libqtquicktemplates2plugin$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		DB14F1D496F6703DD2F8C46F = {
+			fileRef = "862880D39CE92253F34E84DF";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		6D31988DD1692E3D7C13C67D = {
+			isa = PBXFileReference;
+			name = "qtquickcontrols2materialstyleplugin";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls.2/Material/libqtquickcontrols2materialstyleplugin$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		546D2E8A62D635CB51FF663E = {
+			fileRef = "6D31988DD1692E3D7C13C67D";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		767F94FF02A126E6AB83B1AD = {
+			isa = PBXFileReference;
+			name = "Qt5QuickControls2";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5QuickControls2$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		0CFF7B1967D089CA0C7F858A = {
+			fileRef = "767F94FF02A126E6AB83B1AD";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		06543E8A304E74631D67082C = {
+			isa = PBXFileReference;
+			name = "Qt5QuickTemplates2";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5QuickTemplates2$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		73DA662291BA1F397AA55B44 = {
+			fileRef = "06543E8A304E74631D67082C";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C318AF055A2228BC2CF21764 = {
+			isa = PBXFileReference;
+			name = "Qt5Quick";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5Quick$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		3CFEA84048A35AFA07D7B4ED = {
+			fileRef = "C318AF055A2228BC2CF21764";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		9757F2857120F524C67B402E = {
+			isa = PBXFileReference;
+			name = "Qt5Gui";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5Gui$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		C9FE76BAC8532D88ABDC1EF5 = {
+			fileRef = "9757F2857120F524C67B402E";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A01FEA3FE1152BC9E8B73432 = {
+			isa = PBXFileReference;
+			name = "qtlibpng";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libqtlibpng$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		EF0166C72C24BCBA43C4719D = {
+			fileRef = "A01FEA3FE1152BC9E8B73432";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		53494652A91F2AFDF5EB965E = {
+			isa = PBXFileReference;
+			name = "qtharfbuzz";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libqtharfbuzz$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		2E5C35D513B2FD18990AB44A = {
+			fileRef = "53494652A91F2AFDF5EB965E";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		06C43854F581447817B9AA33 = {
+			isa = PBXFileReference;
+			name = "Qt5Qml";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5Qml$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		174BEB8D680176C250FE3E3B = {
+			fileRef = "06C43854F581447817B9AA33";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		EEA3C4ECCC66EEDA6A8ADDC2 = {
+			isa = PBXFileReference;
+			name = "Qt5Network";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5Network$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		A6449C8FAAACB2F8C0F4DD4D = {
+			fileRef = "EEA3C4ECCC66EEDA6A8ADDC2";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		77A722F3E3672801DDE62960 = {
+			isa = PBXFileReference;
+			name = "Qt5Core";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libQt5Core$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		209F4F52A758165773D3E5FF = {
+			fileRef = "77A722F3E3672801DDE62960";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		2AF4BF944E77BC00F93D1320 = {
+			isa = PBXFileReference;
+			name = "qtpcre2";
+			path = "/Users/thomas/V-PlaySDK/V-Play/ios/lib/libqtpcre2$(QT_LIBRARY_SUFFIX).a";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		067B78FD68892BFE23729457 = {
+			fileRef = "2AF4BF944E77BC00F93D1320";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		AF39DD055C3EF8226FBE929D = {
+			children = (
+				"99A21B0D222BF04B05103523",
+				"CF27DA584C2D8714BF3774CF",
+				"FCC237CA5AD60B9BA4447615",
+				"7EC00404ACD5AB0E97726B0E",
+				"3C44131FDCFEF4396B9EA2BA",
+				"4D765E1B1EA6C757220C63E7",
+				"6AE3EC31EE5BB1FCEE84137C",
+				"7D7B02101166B76FD2D4F8B4",
+				"3A8EF9C62A8D4790CBB89CEA",
+				"1BC99EFDB381FAEE73AD6BA9",
+				"2C3B63357AA6B8D3FD40F5E9",
+				"BEF9DFDA6822604126A7E233",
+				"547CCADBD1CC5050167EF948",
+				"F923F38E989CF0F61A164DD8",
+				"205259EEEE2BADA5E64741E3",
+				"21F907AB8D19BD779147A085",
+				"A71E5C5A9FAF1CD0A9AB505D",
+				"E91316BEB37C47657C51D223",
+				"DE065BD14A062B3D24C724C1",
+				"B92AC977828FCD14F77A3E84",
+				"6BEA45ECB54E8144B0D0E225",
+				"477D9510A9A34EEA186E705C",
+				"B5FCC8A4ABF4F7E33321D49C",
+				"2C42672534D1D5830E8B87AC",
+				"8980712814F5B052003DE88C",
+				"005C5650B37ECCA17B3EBB30",
+				"E0522F8437CC56B525D5EB9D",
+				"5A2D0511BF621320C17CD3A2",
+				"23CD748A44F6AA13B3A38FE4",
+				"B5C4B0263AF756CF84ECB951",
+				"237B3A18ADA35C2AA5BFD31F",
+				"A9F1BF1DE7A071B2FE92D0BC",
+				"E11968E760A4E009225D9477",
+				"5D387C506864CEC4D021CAFB",
+				"1D4F7402433E3A5258C3A3E3",
+				"AB73E65D2F84767CC257244D",
+				"C7FF0B47D658CEAD8D68D39D",
+				"F9581B1857CA540D60672FB0",
+				"903FC366F89FF7628BF8D003",
+				"859BD86A5634B41288B4911E",
+				"D9379BB92F7137D61AFE5CF4",
+				"69C711DD3E6E4E15AEB507A8",
+				"03F5663BBE697082CB6F1012",
+				"536D7940009B932DDC2CD198",
+				"EE88DCC6411ECD4F703B97D3",
+				"19FF2B403FF2F2235DBB87BE",
+				"DE5DED4707A95079B0E5363E",
+				"621DADD5F916B3C839AFA3CE",
+				"BF3BC53EEC75606069ABC686",
+				"C28EF4E7AD0BE4D387CC2091",
+				"BC2485AAF277CD790B419D91",
+				"F5814BE76F5C3BFF9C74763F",
+				"CE97D21CA4E6D4AA469A0537",
+				"B833BE984E67735E938C49E8",
+				"DC644687B1583DD44A7BEE14",
+				"66CFFFF68476737A2FC9C24E",
+				"82BB2D75780353E7989EC083",
+				"EC2BA8E70385D064D0F47FB4",
+				"9B046880CF0D0790F1679CEB",
+				"E9583B8FC6BC8E3AE2FCB52F",
+				"AD3436B498A1D566A6CC0CF3",
+				"6F313FFC1A28C5E274C68324",
+				"DA0C587AC602801C99275864",
+				"F5F1B9ADBFE5E9A0B58EE68F",
+				"7AD55E33DCEF587BFCE80AE9",
+				"35454AC05C073458A4480AAF",
+				"A91E0D8730DC28A6AC521633",
+				"D60D78D5D2B8F505FB65BEEC",
+				"5F9D849923974AC497ACBE2B",
+				"FC1F25EEA9DBA5401B2F9660",
+				"0244A800AF0F262B4E9D45A9",
+				"943CA005091A56FBB1F111DE",
+				"8D5C60D7E836AD83CA4726E8",
+				"BB5C90286B39957899AE520E",
+				"D1EA355240FCAE72BC4208BE",
+				"C8537935A79411355903DE6B",
+				"862880D39CE92253F34E84DF",
+				"6D31988DD1692E3D7C13C67D",
+				"767F94FF02A126E6AB83B1AD",
+				"06543E8A304E74631D67082C",
+				"C318AF055A2228BC2CF21764",
+				"9757F2857120F524C67B402E",
+				"A01FEA3FE1152BC9E8B73432",
+				"53494652A91F2AFDF5EB965E",
+				"06C43854F581447817B9AA33",
+				"EEA3C4ECCC66EEDA6A8ADDC2",
+				"77A722F3E3672801DDE62960",
+				"2AF4BF944E77BC00F93D1320");
+			isa = PBXGroup;
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		D1C883685E82D5676953459A = {
+			buildActionMask = 2147483647;
+			files = (
+				"9444FF047E14E3B78479BEA4",
+				"7167D10E380E2516806FA9E8",
+				"F26454630C80841CBDCFE1CA",
+				"B460F624007324313696BE86",
+				"4EB68D0C8182BCE33529C421",
+				"F8B465CE34D8DF87AAE95913",
+				"0CE02722F00CAD43741297B5",
+				"2B02D9DC58A01E45248DDBCE",
+				"61EEC397DC8556BF8C4E36A7",
+				"48E7E0402994C65E23AA2E9B",
+				"9FC8E53B7D727D335F2A8AA1",
+				"35A1A39F8EAB37889EB3D397",
+				"B78304F135DEF1F7A68393A6",
+				"6602E41D28CF886E694AD752",
+				"15364689D2AB5A30E87A689F",
+				"CCA737EE379CDB10CC9A0F23",
+				"6358E0672B918DD91519A72F",
+				"15B9D085386D49165952F7EB",
+				"0E9D4C2EBAA944CB2A2F0E49",
+				"0983A1E7188F92E0BF267D6D",
+				"397CD4C9FFB35D67E3CA1B9B",
+				"281E6380E174D3EBD09622C6",
+				"C800920F9EC40A13E51A35CC",
+				"5B5E5FE4637C1C73102E44E8",
+				"F7BC51FE83F07193D4CB88D0",
+				"FAF4D581384654A4FE0AF77C",
+				"2B45D32FDC37034A1C42A325",
+				"9668916BF5B7DB7E7AE01C6C",
+				"10ADEEFA0646667BEA6752B4",
+				"968F8A9EC14FB5FE46F583B6",
+				"A097824441B2A8382B5B2438",
+				"4A11A2A504B0C6ABE1462666",
+				"4537337DD831DB6C1F5EDA11",
+				"407720B2225AFF1A34956046",
+				"3AA564BDB4494B812D86C165",
+				"B86095B9129825D08864B8A5",
+				"EEAC9AF0A0494C6FAF178C00",
+				"E48650E3E5C91AA4CD362949",
+				"D869FF27582AB4C6D61103B5",
+				"442810B5B16A40ADD4F3BBD2",
+				"9118B63DEB469B977989349A",
+				"A38007ECEA86E3FA51640B58",
+				"A232EECE3CC6DB336F051CD6",
+				"895532DC10012FF5C0038DC9",
+				"BF9761BF99581C3C7BF944A2",
+				"9D1D22210DB67BC00D24B614",
+				"FC759FF4C76522D4E722D152",
+				"815568059FEA334F5F9E514B",
+				"B41D3752B316594B368772A2",
+				"139C45A8A5E652EB28EB28AC",
+				"808E89B16CDD1E3D4FD440ED",
+				"9756BDEAC57316FD12CDB43D",
+				"18FB55D3AB26AFECDE48CFF5",
+				"27399983CCE15CB6F3D83464",
+				"9A8119346FD96B66B234B19B",
+				"B797B7805BD9BB7653A6A999",
+				"B289B4B3F2196ABAE3C7006E",
+				"9AE0415F0835F9BF31498F09",
+				"03270F9B7937964C0C76F7A7",
+				"97B314FF82095553EC347DB1",
+				"CF56D42FDA427B8C6F5BBEB7",
+				"7F9BBE2F805879CC385CBBC1",
+				"1E043F185F68390C7A0B7AD6",
+				"14D18828B515F4074A295977",
+				"EAD86FB14C7B037927BF5FB6",
+				"EECBFAFE88BFA5373C9EC147",
+				"1B6EB9064D3F5FF65083BCA1",
+				"DB3AC6B7696970BF4BA1DC63",
+				"DDF98F71B5EC2C3CE2FA6162",
+				"87530620467AD39947883C00",
+				"C33FB9EF9E586C2697AD46F6",
+				"BA00143332D74663F1B2ACCB",
+				"F478304C3B4E9E9FF7FB2F4A",
+				"E7807971B16464887BC0C002",
+				"4FB1453B88F9B1BFB36C3D09",
+				"E4AC6A27329F7424433FACAB",
+				"DB14F1D496F6703DD2F8C46F",
+				"546D2E8A62D635CB51FF663E",
+				"0CFF7B1967D089CA0C7F858A",
+				"73DA662291BA1F397AA55B44",
+				"3CFEA84048A35AFA07D7B4ED",
+				"C9FE76BAC8532D88ABDC1EF5",
+				"EF0166C72C24BCBA43C4719D",
+				"2E5C35D513B2FD18990AB44A",
+				"174BEB8D680176C250FE3E3B",
+				"A6449C8FAAACB2F8C0F4DD4D",
+				"209F4F52A758165773D3E5FF",
+				"067B78FD68892BFE23729457");
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Link Binary With Libraries";
+		};
+		776D5E25B18ED6FE9A43064F = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)");
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Qt Postlink";
+			shellPath = "/bin/sh";
+			shellScript = "echo Copying application data... && mkdir -p \"$CODESIGNING_FOLDER_PATH/\" && cp -r \"/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/qml\" \"$CODESIGNING_FOLDER_PATH/\" && mkdir -p \"$CODESIGNING_FOLDER_PATH/\" && cp -r \"/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/assets\" \"$CODESIGNING_FOLDER_PATH/\"";
+			showEnvVarsInLog = "0";
+		};
+		36B7D58838183A7D0E096C7B = {
+			isa = PBXFileReference;
+			path = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug/TapEm.xcodeproj/Default-568h@2x.png";
+			name = "Default-568h@2x.png";
+			sourceTree = "<absolute>";
+		};
+		EFA6A8F16265C2E094DEE62D = {
+			fileRef = "36B7D58838183A7D0E096C7B";
+			isa = PBXBuildFile;
+		};
+		A63C169E919BD250E20A8BCF = {
+			isa = PBXFileReference;
+			path = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug/TapEm.xcodeproj/LaunchScreen.xib";
+			name = "LaunchScreen.xib";
+			sourceTree = "<absolute>";
+		};
+		FD11E3F38B5238F66F278914 = {
+			fileRef = "A63C169E919BD250E20A8BCF";
+			isa = PBXBuildFile;
+		};
+		F90AB13DA03C68BAD3E68558 = {
+			isa = PBXFileReference;
+			path = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/ios/Assets.xcassets";
+			name = "Assets.xcassets";
+			sourceTree = "<absolute>";
+		};
+		9DF6D719EA448316C41ABDF1 = {
+			fileRef = "F90AB13DA03C68BAD3E68558";
+			isa = PBXBuildFile;
+		};
+		858FCAB0EB1F29CF8B07677C = {
+			children = (
+				"36B7D58838183A7D0E096C7B",
+				"A63C169E919BD250E20A8BCF",
+				"F90AB13DA03C68BAD3E68558");
+			isa = PBXGroup;
+			name = "Bundle Data";
+			sourceTree = "<group>";
+		};
+		30414803F31797EB689AE508 = {
+			buildActionMask = 2147483647;
+			files = (
+				"EFA6A8F16265C2E094DEE62D",
+				"FD11E3F38B5238F66F278914",
+				"9DF6D719EA448316C41ABDF1");
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Copy Bundle Resources";
+		};
+		99542592E9780B9225F24AA8 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		815EA2DB4C2FAB88BB604C05 = {
+			isa = PBXFileReference;
+			includeInIndex = 0;
+			explicitFileType = "wrapper.application";
+			path = "TapEm.app";
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE0A091FDBFB3E9C31B7A1BD = {
+			children = (
+				"815EA2DB4C2FAB88BB604C05");
+			isa = PBXGroup;
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		E8C543AB96796ECAA2E65C57 = {
+			children = (
+				"2EB56BE3C2D93CDAB0C52E67",
+				"25B08E2869634E9BCBA333A2",
+				"87DF60DE337FB58864343E39",
+				"74B182DB50CB5611B5C1C297",
+				"AF39DD055C3EF8226FBE929D",
+				"858FCAB0EB1F29CF8B07677C",
+				"FE0A091FDBFB3E9C31B7A1BD");
+			isa = PBXGroup;
+			name = "TapEm";
+			sourceTree = "<group>";
+		};
+		FFE426D4B0E2BDD3CA2CD19E = {
+			buildPhases = (
+				"5E618435888B9D49F8540165",
+				"7EF0942E79C014DCEC8976BC");
+			dependencies = (
+				);
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
+			isa = PBXAggregateTarget;
+			buildRules = (
+);
+			productName = "Qt Preprocess";
+			name = "Qt Preprocess";
+		};
+		2740A5A873EC9CE9256DD0D4 = {
+			isa = PBXTargetDependency;
+			target = "FFE426D4B0E2BDD3CA2CD19E";
+		};
+		7C0ED49F3C10F63E61CFF5BF = {
+			buildPhases = (
+				"F7E50F631C51CD5B5DC0BC43",
+				"D1C883685E82D5676953459A",
+				"776D5E25B18ED6FE9A43064F",
+				"30414803F31797EB689AE508",
+				"99542592E9780B9225F24AA8");
+			dependencies = (
+				"2740A5A873EC9CE9256DD0D4");
+			productReference = "815EA2DB4C2FAB88BB604C05";
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
+			isa = PBXNativeTarget;
+			buildRules = (
+);
+			productType = "com.apple.product-type.application";
+			name = "TapEm";
+			productName = "TapEm";
+		};
+		3AA6C32AC930069E80220CF1 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=iphoneos*]" = "arm64";
+				"ARCHS[sdk=iphonesimulator*]" = "x86_64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage";
+				COPY_PHASE_STRIP = "NO";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				DEVELOPMENT_TEAM = "YGTQFZ333M";
+				ENABLE_BITCODE = "YES";
+				GCC_OPTIMIZATION_LEVEL = "0";
+				ONLY_ACTIVE_ARCH = "YES";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.threeFlipProductions.thomasKatzlinger.TapEm";
+				PRODUCT_NAME = "TapEm";
+				"QMAKE_MAC_SDK_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk";
+				"QMAKE_MAC_SDK_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				INFOPLIST_FILE = "../TapEm/ios/Project-Info.plist";
+				SYMROOT = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug//.xcode";
+				CONFIGURATION_BUILD_DIR = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug//$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DYLIB_CURRENT_VERSION = "1.0.0";
+				DYLIB_COMPATIBILITY_VERSION = "1.0";
+				IPHONEOS_DEPLOYMENT_TARGET = "10.0";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"../TapEm",
+					".",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/mkspecs/common/uikit",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/VPlay",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtQuick",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtWidgets",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtMultimedia",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtGui",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtQml",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtWebSockets",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtNetwork",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtSql",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtCore",
+					".",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/mkspecs/macx-ios-clang");
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/thomas/V-PlaySDK/V-Play/ios/lib",
+					"/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/ios",
+					"/System/Library/Frameworks/",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/platforms",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/platforms/darwin",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/mediaservice",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/audio",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/playlistformats",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/bearer",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/sqldrivers",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick.2",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtGraphicalEffects",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtGraphicalEffects/private",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Window.2",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtMultimedia",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/LocalStorage",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Layouts",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Particles.2",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtLocation",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtPositioning",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtWebView",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls.2",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Templates.2",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls.2/Material");
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/ios");
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-g",
+					"-fobjc-nonfragile-abi",
+					"-fobjc-legacy-dispatch",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_COMPILER_SUPPORTS_SSE2",
+					"-DQT_QML_DEBUG",
+					"-DQT_QUICK_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_MULTIMEDIA_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_QML_LIB",
+					"-DQT_WEBSOCKETS_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_SQL_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-stdlib=libc++",
+					"-g",
+					"-std=gnu++11",
+					"-fobjc-nonfragile-abi",
+					"-fobjc-legacy-dispatch",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_COMPILER_SUPPORTS_SSE2",
+					"-DQT_QML_DEBUG",
+					"-DQT_QUICK_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_MULTIMEDIA_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_QML_LIB",
+					"-DQT_WEBSOCKETS_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_SQL_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_LDFLAGS = (
+						"-stdlib=libc++",
+						"-Wl,-e,_qt_main_wrapper",
+						"-Wl,-rpath,@executable_path/Frameworks",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/lib",
+						"-F/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/ios",
+						"-L/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/ios",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/platforms",
+						"-framework",
+						"UIKit",
+						"-framework",
+						"AssetsLibrary",
+						"-framework",
+						"MobileCoreServices",
+						"-framework",
+						"OpenGLES",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/platforms/darwin",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/mediaservice",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/audio",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/playlistformats",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/bearer",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/sqldrivers",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick.2",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtGraphicalEffects",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtGraphicalEffects/private",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Window.2",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtMultimedia",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/LocalStorage",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Layouts",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Particles.2",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtLocation",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtPositioning",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtWebView",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls.2",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Templates.2",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls.2/Material",
+						"-lm",
+						"-lz");
+				ARCHS = "arm64 x86_64";
+			};
+			name = "Debug";
+		};
+		77418F46922677BB04ED38DD = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=iphoneos*]" = "arm64";
+				"ARCHS[sdk=iphonesimulator*]" = "x86_64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage";
+				COPY_PHASE_STRIP = "NO";
+				DEBUG_INFORMATION_FORMAT = "dwarf";
+				DEVELOPMENT_TEAM = "YGTQFZ333M";
+				ENABLE_BITCODE = "YES";
+				GCC_OPTIMIZATION_LEVEL = "0";
+				ONLY_ACTIVE_ARCH = "YES";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.threeFlipProductions.thomasKatzlinger.TapEm";
+				PRODUCT_NAME = "TapEm";
+				"QMAKE_MAC_SDK_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk";
+				"QMAKE_MAC_SDK_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "TapEm";
+			};
+			name = "Debug";
+		};
+		339EE1B2CC4FC24589A0EA95 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=iphoneos*]" = "arm64";
+				"ARCHS[sdk=iphonesimulator*]" = "x86_64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage";
+				COPY_PHASE_STRIP = "NO";
+				DEVELOPMENT_TEAM = "YGTQFZ333M";
+				ENABLE_BITCODE = "YES";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.threeFlipProductions.thomasKatzlinger.TapEm";
+				PRODUCT_NAME = "TapEm";
+				"QMAKE_MAC_SDK_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk";
+				"QMAKE_MAC_SDK_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				INFOPLIST_FILE = "../TapEm/ios/Project-Info.plist";
+				SYMROOT = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug//.xcode";
+				CONFIGURATION_BUILD_DIR = "/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/build-TapEm-Qt_5_11_1_iOS_V_Play-Debug//$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DYLIB_CURRENT_VERSION = "1.0.0";
+				DYLIB_COMPATIBILITY_VERSION = "1.0";
+				IPHONEOS_DEPLOYMENT_TARGET = "10.0";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"../TapEm",
+					".",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/mkspecs/common/uikit",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/VPlay",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtQuick",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtWidgets",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtMultimedia",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtGui",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtQml",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtWebSockets",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtNetwork",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtSql",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/include/QtCore",
+					".",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/mkspecs/macx-ios-clang");
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/thomas/V-PlaySDK/V-Play/ios/lib",
+					"/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/ios",
+					"/System/Library/Frameworks/",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/platforms",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/platforms/darwin",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/mediaservice",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/audio",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/playlistformats",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/bearer",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/plugins/sqldrivers",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick.2",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtGraphicalEffects",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtGraphicalEffects/private",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Window.2",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtMultimedia",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/LocalStorage",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Layouts",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Particles.2",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtLocation",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtPositioning",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtWebView",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls.2",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Templates.2",
+					"/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls.2/Material");
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/ios");
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-g",
+					"-fobjc-nonfragile-abi",
+					"-fobjc-legacy-dispatch",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_COMPILER_SUPPORTS_SSE2",
+					"-DQT_QML_DEBUG",
+					"-DQT_QUICK_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_MULTIMEDIA_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_QML_LIB",
+					"-DQT_WEBSOCKETS_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_SQL_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-stdlib=libc++",
+					"-g",
+					"-std=gnu++11",
+					"-fobjc-nonfragile-abi",
+					"-fobjc-legacy-dispatch",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DQT_COMPILER_SUPPORTS_SSE2",
+					"-DQT_QML_DEBUG",
+					"-DQT_QUICK_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_MULTIMEDIA_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_QML_LIB",
+					"-DQT_WEBSOCKETS_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_SQL_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_LDFLAGS = (
+						"-stdlib=libc++",
+						"-Wl,-e,_qt_main_wrapper",
+						"-Wl,-rpath,@executable_path/Frameworks",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/lib",
+						"-F/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/ios",
+						"-L/Users/thomas/Documents/FH/PortfolioNew/FINAL/vPlay/TapEm/TapEm/ios",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/platforms",
+						"-framework",
+						"UIKit",
+						"-framework",
+						"AssetsLibrary",
+						"-framework",
+						"MobileCoreServices",
+						"-framework",
+						"OpenGLES",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/platforms/darwin",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/mediaservice",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/audio",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/playlistformats",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/imageformats",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/qmltooling",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/bearer",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/plugins/sqldrivers",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick.2",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtGraphicalEffects",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtGraphicalEffects/private",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Window.2",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtMultimedia",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/LocalStorage",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Layouts",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Particles.2",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtLocation",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtPositioning",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtWebView",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls.2",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Templates.2",
+						"-L/Users/thomas/V-PlaySDK/V-Play/ios/qml/QtQuick/Controls.2/Material",
+						"-lm",
+						"-lz");
+				ARCHS = "arm64 x86_64";
+			};
+			name = "Release";
+		};
+		6666AA5E688052234F6758D8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=iphoneos*]" = "arm64";
+				"ARCHS[sdk=iphonesimulator*]" = "x86_64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage";
+				COPY_PHASE_STRIP = "NO";
+				DEVELOPMENT_TEAM = "YGTQFZ333M";
+				ENABLE_BITCODE = "YES";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.threeFlipProductions.thomasKatzlinger.TapEm";
+				PRODUCT_NAME = "TapEm";
+				"QMAKE_MAC_SDK_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk";
+				"QMAKE_MAC_SDK_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphoneos*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform";
+				"QMAKE_MAC_SDK_PLATFORM_PATH[sdk=iphonesimulator*]" = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "iphoneos";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_NAME = "TapEm";
+			};
+			name = "Release";
+		};
+		DAC4C1AA5EDEA1C85E9CA5E6 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"3AA6C32AC930069E80220CF1",
+				"339EE1B2CC4FC24589A0EA95");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug";
+		};
+		6CC3B5D2136C7CD6A5CF5A59 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"77418F46922677BB04ED38DD",
+				"6666AA5E688052234F6758D8");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug";
+		};
+		6DB9C3763D02B1415CD9D565 = {
+			hasScannedForEncodings = 1;
+			compatibilityVersion = "Xcode 3.2";
+			isa = PBXProject;
+			mainGroup = "E8C543AB96796ECAA2E65C57";
+			productRefGroup = "FE0A091FDBFB3E9C31B7A1BD";
+			buildConfigurationList = "DAC4C1AA5EDEA1C85E9CA5E6";
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"7C0ED49F3C10F63E61CFF5BF",
+				"FFE426D4B0E2BDD3CA2CD19E");
+			attributes = {
+				TargetAttributes = {
+				};
+			};
+		};
+	};
+	rootObject = "6DB9C3763D02B1415CD9D565";
+}

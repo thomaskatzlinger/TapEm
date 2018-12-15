@@ -1,5 +1,7 @@
 import VPlay 2.0
 import QtQuick 2.0
+import QtGraphicalEffects 1.0
+
 
 GameWindow {
     id: gameWindow
@@ -36,14 +38,35 @@ GameWindow {
         Rectangle {
             id:backgroundStart
             anchors.fill: parent
-            color:customGrey
+            //    color:customGrey
 
+            RadialGradient{
+                anchors.fill: parent
+                GradientStop {
+                    position: 0.0
+                    color: "#FF0000"
+                }
+                GradientStop {
+                    position: 0.1
+                    color: "#00FF00"
+                }
+                GradientStop {
+                    position: 1.0
+                    color: "#0000FF"
+                }
+            }
+
+            // it is important that Text is declared after RadialGradient because otherwise
+            // it would be in the background  and therefore could not be seen
             Text{
                 anchors.centerIn: parent
                 color: "white"
                 text: "< Tap to Start >"
             }
+
         }
+
+
 
         // start the Game on Click
         MouseArea{
