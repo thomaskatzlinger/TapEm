@@ -60,7 +60,7 @@ GameWindow {
             // it would be in the background  and therefore could not be seen
             Text{
                 anchors.centerIn: parent
-                color: "white"
+                color: "Black"
                 text: "< Tap to Start >"
             }
 
@@ -96,6 +96,15 @@ GameWindow {
             id: background
             anchors.fill: parent
             color: customGrey
+        }
+
+        Text {
+            anchors.top: parent
+            x: parent.width/2 - width/2 // horizontal center
+            y: 10
+            color: "white"
+            text:"Score: " + score
+            z: 100 // force to display on top
         }
 
         // for creating entities at runtime dynamically
