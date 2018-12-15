@@ -58,15 +58,55 @@ GameWindow {
 
             // it is important that Text is declared after RadialGradient because otherwise
             // it would be in the background  and therefore could not be seen
-            Text{
-                anchors.centerIn: parent
-                color: "Black"
-                text: "< Tap to Start >"
-            }
 
+            Text {
+                //   anchors.top:  parent
+                y: parent.height/8*2.5
+                x: parent.width/2 - width/2 // horizontal center
+
+                color: "Black"
+                font.family: "Futura"
+                font.bold: true
+                font.pointSize: 40
+
+                text: "Tap 'em"
+            }
+            Text {
+                id: tapToStart
+                // anchors.bottom: parent
+                y: (parent.height/8*5)
+                x: parent.width/2 - width/2 // horizontal center
+
+                color: "Black"
+                font.family: "Futura"
+                font.bold: true
+
+                text: "< Tap to Start >"
+                font.pointSize: 8
+
+
+            }
         }
 
 
+        SequentialAnimation{
+            running: true
+            loops: Animation.Infinite
+            NumberAnimation {
+                target: tapToStart
+                property: "font.pointSize"
+                duration: 200
+                from: 8
+                to: 11
+            }
+            NumberAnimation {
+                target: tapToStart
+                property: "font.pointSize"
+                duration: 200
+                from: 11
+                to: 8
+            }
+        }
 
         // start the Game on Click
         MouseArea{
@@ -104,6 +144,8 @@ GameWindow {
             y: 10
             color: "white"
             text:"Score: " + score
+            font.family: "Futura"
+
             z: 100 // force to display on top
         }
 
