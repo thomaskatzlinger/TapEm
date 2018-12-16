@@ -56,6 +56,7 @@ OBJECTS       = tapem_plugin_import.o \
 		tapem_qml_plugin_import.o
 DIST          = ../TapEm/qml/TapObjectRight.qml \
 		../TapEm/qml/TapObjectLeft.qml \
+		../../TapEmTutorial/qml/TapObject.qml \
 		/Users/thomas/V-PlaySDK/V-Play/ios/mkspecs/features/spec_pre.prf \
 		/Users/thomas/V-PlaySDK/V-Play/ios/mkspecs/qdevice.pri \
 		/Users/thomas/V-PlaySDK/V-Play/ios/mkspecs/features/device_config.prf \

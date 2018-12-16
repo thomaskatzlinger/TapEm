@@ -14,18 +14,7 @@ GameWindow {
     // Possible values for gameState: wait, play, gameOver
     property string gameState: "wait"
 
-
-    // create a licenseKey to hide the splash screen
-    property bool splashFinished: false
-    onSplashScreenFinished: { splashFinished = true}
-
-
     property int score: 0
-
-    property color customGrey: "#222222"
-
-    property bool spawnOnLeftSide: true
-
 
     /* The Start Screen is shown at the beginning of the game. If it gets tapped the Game starts */
     Scene{
@@ -85,6 +74,7 @@ GameWindow {
                 font.pointSize: 8
             }
 
+            // This animation make the tapToStart Text pulsate
             SequentialAnimation{
                 running: true
                 loops: Animation.Infinite
@@ -131,7 +121,7 @@ GameWindow {
         Rectangle {
             id: background
             anchors.fill: parent
-            color: customGrey
+            color: "#222222"
         }
 
         Text {
@@ -142,7 +132,7 @@ GameWindow {
             font.family: "Futura"
             font.bold: true
 
-            z: 100 // force to display on top
+            z: 100 // force to display on top meaning it's always visible
         }
 
         // for creating entities at runtime dynamically
@@ -151,36 +141,30 @@ GameWindow {
             entityContainer: playScene
         }
 
-        /* There are two different types of Components. tapLeftComponents only spawn on the left side of the Screen
-        *  and the other way around.
-        *  This way it is not possible that more than two tapObjects spawn at the same time.
+
+        Component{
+            id: tapComponent
+
+            TapObject{
+                id: tapEntityBase
+            }
+        }// Component
+
+
+        /*
+        *  There are two different Timers.
+        *  This way it is not possible that more than two tapObjects spawns at the same time on each half of the screen.
         *  The reason for that is that the player should always be able to play the game with two fingers (thumbs) only.
         */
-        Component{
-            id: tapLeftComponent
-
-            TapObjectLeft{
-                id: tapLeftEntityBase
-            }
-        }// Component
-
-        Component{
-            id: tapRightComponent
-
-            TapObjectRight{
-                id: tapRightEntityBase
-            }
-        }// Component
-
 
         // Spawn Timer for the left half
         Timer {
             id: timerLeft
             property double rdm : utils.generateRandomValueBetween(600-score*10, 1000-score*5) // decreases difficulty over time
-            running: playScene.visible == true && splashFinished // only enable the creation timer, when the gameScene is visible
+            running: playScene.visible == true// only enable the creation timer, when the gameScene is visible
             repeat: true
             interval: rdm > 100 ? rdm : 100  /// makes sure the spawn interval does not drop below 100
-            onTriggered: {spawnTapObject(true)}
+            onTriggered: {spawnTapObject([0,1])}
 
         }
 
@@ -189,24 +173,22 @@ GameWindow {
             id: timerRight
             property double rdm : utils.generateRandomValueBetween(600-score*10, 1000-score*5) // decreases difficulty over time
 
-            running: playScene.visible == true && splashFinished // only enable the creation timer, when the gameScene is visible
+            running: playScene.visible == true// only enable the creation timer, when the gameScene is visible
             repeat: true
             interval: rdm > 100 ? rdm : 100  // makes sure the spawn interval does not drop below 100
-            onTriggered: {spawnTapObject(false)}
+            onTriggered: {spawnTapObject([2,3])}
         }
     }// Play Scene
 
-    // Spawn a new TapOject ether on the left or the right half of the screen
-    function spawnTapObject(left) {
-        if(left){
-            gameWindow.spawnOnLeftSide = true;
-            entityManager.createEntityFromComponent(tapLeftComponent)
-            //     console.debug(timerLeft.f);
+    function spawnTapObject(boarder) {
+        var rdm = utils.generateRandomValueBetween(600-score*10, 1000-score*5);
+        if(boarder[0] === 0){
+            timerLeft.interval = rdm > 100 ? rdm : 100
+        }else{
+            timerRight.interval = rdm > 100 ? rdm : 100
         }
-        else{
-            gameWindow.spawnOnLeftSide = false;
-            entityManager.createEntityFromComponent(tapRightComponent)
-        }
+
+        entityManager.createEntityFromComponentWithProperties(tapComponent, {x: Math.round(utils.generateRandomValueBetween(boarder[0],boarder[1]))*playScene.width/4})
     }
 
     // isGameLost gets called whenever a TapObject reaches the bottom of the screen

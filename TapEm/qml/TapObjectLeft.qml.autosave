@@ -3,13 +3,7 @@ import QtQuick 2.0
 import QtGraphicalEffects 1.0
 
 EntityBase {
-    // property int xPos: Math.round(utils.generateRandomValueBetween(0,3))
-    property int xPos : Math.round(utils.generateRandomValueBetween(0,1))// Math.round(utils.generateRandomValueBetween(0,1)) : Math.round(utils.generateRandomValueBetween(2,3))
-    entityType: "tapEntity" // required for removing all of these entities when the game is lost
-
-    // generates integer values for x between 0 and 3 (incl.)
-    x: xPos * tapObject.width
-
+  
     NumberAnimation on y {
         property double dur : 3000 - score*score;
 
@@ -71,7 +65,6 @@ EntityBase {
 
             tapObject.tapped = true;
         }
-
 
     }
 }// EntityBase
